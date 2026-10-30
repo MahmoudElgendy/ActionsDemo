@@ -29,7 +29,6 @@ public sealed class EmployeeServiceTests
         var employees = await new EmployeeService(db).GetAllAsync();
 
         Assert.Equal([10, 20], employees.Select(employee => employee.Id));
-        Assert.Equal(1, 2);
     }
 
     [Fact]
