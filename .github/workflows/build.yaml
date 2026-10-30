@@ -26,6 +26,19 @@ jobs:
           cache: true
           cache-dependency-path: '**/*.csproj'
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: EmployeeWeb/package-lock.json
+
+      - name: Install frontend dependencies
+        run: npm ci --prefix EmployeeWeb
+
+      - name: Build frontend
+        run: npm run build --prefix EmployeeWeb
+
       - name: Restore dependencies
         run: dotnet restore EmployeeApi.Tests/EmployeeApi.Tests.csproj
 
