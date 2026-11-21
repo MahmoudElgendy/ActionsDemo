@@ -184,7 +184,7 @@ function App() {
       <aside className="sidebar">
         <a className="brand" href="#directory" aria-label="Team Ledger home">
           <span className="brand-mark"><UsersRound size={20} strokeWidth={2.2} /></span>
-          <span className="brand-name">team<span>ledger</span></span>
+          <span className="brand-name">team<span>ledgerrrr</span></span>
         </a>
 
         <div className="workspace-switcher">
